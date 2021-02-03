@@ -1,0 +1,11 @@
+venv
+.idea
+*.pyc
+favicon.ico
+account.txt
+
+pyinstaller*.py
+pyinstaller
+*.spec
+dist
+build
