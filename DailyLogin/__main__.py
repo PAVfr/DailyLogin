@@ -31,14 +31,13 @@ Message()
 if Admin.is_admin() and os.path.split(sys.executable)[-1] != "python.exe":
     TaskService()
 
-# Check Version .exe
-if os.path.split(sys.executable)[-1] != "python.exe":
-    app = ApplicationEXE()
-    if app.compare_version():
-        Message.last_version()
-        os.system("PAUSE")
-        webbrowser.open("https://github.com/PAVfr/DailyLogin")
-        sys.exit(0)
+# Check Version
+app = ApplicationEXE()
+if app.compare_version():
+    Message.last_version()
+    os.system("PAUSE")
+    webbrowser.open("https://github.com/PAVfr/DailyLogin")
+    sys.exit(0)
 
 # Start Accounts
 for account in Account.get_account():
