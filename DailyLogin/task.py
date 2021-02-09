@@ -39,6 +39,6 @@ class TaskService:
 
 
     def create_task(self):
-        r = subprocess.run(f'SCHTASKS /Create /F /SC ONLOGON /TN "{self.name}" /TR "{self.path}"', capture_output=True).stdout
+        r = subprocess.run(f'SCHTASKS /Create /F /SC ONLOGON /TN "{self.name}" /TR "{self.path_run}"', capture_output=True).stdout
         Message.task_update()
         return r
